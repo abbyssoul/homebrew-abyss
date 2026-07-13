@@ -25,29 +25,33 @@ class Kinjo < Formula
     depends_on "rust" => :build
   end
 
+  # kinjo discovers commands in `share/kinjo/commands` relative to its own
+  # binary, so installing into pkgshare/"commands" makes the bundled defaults
+  # work out of the box — no post-install copying.
   def install
     if OS.mac?
       bin.install "kinjo"
-      pkgshare.install Dir["commands/*.toml"]
+      (pkgshare/"commands").install Dir["commands/*.toml"]
     else
       system "cargo", "install", *std_cargo_args
-      pkgshare.install Dir["actions/*.toml"]
+      (pkgshare/"commands").install Dir["actions/*.toml"]
     end
   end
 
   def caveats
     <<~EOS
-      Sample command definitions were installed to:
-        #{opt_pkgshare}
+      Default command definitions were installed to:
+        #{opt_pkgshare}/commands
 
-      kinjo loads user commands from ~/.config/kinjo/commands (or
-      $XDG_CONFIG_HOME/kinjo/commands). Copy the ones you want to use:
-        mkdir -p ~/.config/kinjo/commands
-        cp #{opt_pkgshare}/*.toml ~/.config/kinjo/commands/
+      kinjo discovers them there automatically. To customize a command, copy
+      it to ~/.config/kinjo/commands (or $XDG_CONFIG_HOME/kinjo/commands) and
+      edit it; a user command with the same name overrides the bundled one.
     EOS
   end
 
   test do
-    assert_match "NAME", shell_output("#{bin}/kinjo list-commands")
+    # `ssh` is one of the bundled defaults; seeing it proves the binary
+    # discovered the commands installed under pkgshare.
+    assert_match "ssh", shell_output("#{bin}/kinjo list-commands")
   end
 end
