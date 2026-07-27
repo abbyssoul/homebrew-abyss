@@ -5,19 +5,19 @@ class Kinjo < Formula
   # automatically by kinjo's `update-homebrew-tap.yml` release workflow after
   # each tagged release finishes uploading its artifacts. Hand edits to those
   # fields will be overwritten by the next release.
-  url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.7/kinjo-0.3.7.tar.gz"
-  sha256 "6f5f1fa2e04fd74eeab862ce60665991755f01d877a27e8edc4ef16d2bba90bf" # kinjo-source-sha256
+  url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.8/kinjo-0.3.8.tar.gz"
+  sha256 "bf73f1365499d49121dcb9b95d89dd5c7a65384d3f7b93666109dd08b6141fad" # kinjo-source-sha256
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.7/kinjo-0.3.7-aarch64-apple-darwin.tar.gz"
-      sha256 "3cbb0d0672caa08c54f72fd6361b1cdb40076f55bf456a3e3ed12150ac6050b8" # kinjo-macos-arm64-sha256
+      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.8/kinjo-0.3.8-aarch64-apple-darwin.tar.gz"
+      sha256 "b98c10e515c1a9520808b6ff87d9528963d72038f15648825c7fa70e360162c3" # kinjo-macos-arm64-sha256
     end
 
     on_intel do
-      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.7/kinjo-0.3.7-x86_64-apple-darwin.tar.gz"
-      sha256 "2de13fa829a4dc472a7a78d6487d3ab06663e40723e28bbed29bdb4faf335ef6" # kinjo-macos-intel-sha256
+      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.8/kinjo-0.3.8-x86_64-apple-darwin.tar.gz"
+      sha256 "4d3695ae517ce68f84fbb1a6bf7a72ca592e07812dd180190ab50ac9967bbe63" # kinjo-macos-intel-sha256
     end
   end
 
