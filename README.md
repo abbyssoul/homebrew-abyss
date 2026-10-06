@@ -19,8 +19,11 @@ brew "<formula>"
 |---|---|---|
 | `kinjo` | TUI and command launcher for local network mDNS services | [kinjo](https://github.com/abbyssoul/kinjo)'s release workflow, one pull request per release |
 
-A release's pull request rewrites the formula's URLs and `sha256` fields; hand
-edits to those fields are overwritten by the next release.
+The formulae install each project's prebuilt release archives on macOS and
+Linux, so installing never needs a compiler or language toolchain. A release's
+pull request rewrites the whole formula from a template in the project's
+repository; change the template there, since the next release overwrites hand
+edits here.
 
 Every pull request runs `brew test-bot`, which audits, installs and tests the
 changed formulae on macOS (Apple silicon and Intel) and Linux.
