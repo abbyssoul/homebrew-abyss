@@ -1,5 +1,7 @@
-# Install as homebrew-abyss/.github/workflows/kinjo.yml and require both jobs
-# on protected tap main. This file is documentation until copied to the tap.
+# Installs the changed Kinjo formula on Apple silicon and Intel macOS and
+# checks that the installed binary reports the formula's release, which
+# test-bot does not. Kinjo's release workflow waits for these checks before
+# reporting its tap pull request; require both jobs on protected main.
 name: Check Kinjo formula
 
 on:

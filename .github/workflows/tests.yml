@@ -39,7 +39,12 @@ jobs:
 
       - run: brew test-bot --only-setup
 
+      # Tap syntax does not depend on the runner (readall checks every OS and
+      # arch), so skip it on Intel macOS, where Homebrew no longer bottles
+      # shellcheck's dependencies: `brew style` builds them from source and
+      # failed after 35 minutes. Intel still installs and tests each formula.
       - run: brew test-bot --only-tap-syntax
+        if: matrix.os != 'macos-15-intel'
 
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
