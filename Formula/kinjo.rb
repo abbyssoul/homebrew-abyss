@@ -8,25 +8,25 @@ class Kinjo < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.12/kinjo-0.3.12-aarch64-apple-darwin.tar.gz"
-      sha256 "e773cdea5811dc9140cebfacb133ce6d58e466d68e07d0ab19395754aad0d1f2"
+      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.13/kinjo-0.3.13-aarch64-apple-darwin.tar.gz"
+      sha256 "777f80c2ee1b02b687b305e7b3d8ade77ed62730043e2f5b1e08f6b2c6222c99"
     end
 
     on_intel do
-      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.12/kinjo-0.3.12-x86_64-apple-darwin.tar.gz"
-      sha256 "b8f1cce1e78c370f86514aee4a79494e97612c64a81ebcae3832ec94e52836fe"
+      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.13/kinjo-0.3.13-x86_64-apple-darwin.tar.gz"
+      sha256 "c3c5eedb91fd16fa57b200658aa633c229c0166468af5f7d90f2a5633d25780a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.12/kinjo-0.3.12-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "691d20dc29406543e6f37c4f89811f5b83d9e9323159b2030bbb257233583970"
+      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.13/kinjo-0.3.13-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "73c9b987acd9e03e1653480999d94c5540a4efe5f11f7edf7c35e3840c5a6f7c"
     end
 
     on_intel do
-      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.12/kinjo-0.3.12-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "c647afe089dfc279777d6e52ffe72636ca7cacb628d4b706aea1ab5a665b6151"
+      url "https://github.com/abbyssoul/kinjo/releases/download/v0.3.13/kinjo-0.3.13-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "d8e6ebb2ae079c9ab11219c17f1e07d43e6c4a985a9794a92bf6fbec8a6e8a25"
     end
   end
 
